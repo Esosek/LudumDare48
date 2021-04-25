@@ -21,5 +21,8 @@ public class PickaxeThrow : MonoBehaviour
 
         Instantiate(pickaxePrefab, spawnPoint.position, spawnPoint.rotation);
         hasThrown = true;
+
+        // sound fx
+        AudioManager.instance.Play("PickaxeThrow");
     }
 }

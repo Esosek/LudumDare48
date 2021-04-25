@@ -34,6 +34,9 @@ public class Pickaxe : MonoBehaviour
         // particles
         Instantiate(particles, transform.position, Quaternion.identity);
 
+        // sound fx
+        AudioManager.instance.Play("PickaxeHit");
+
         Destroy(gameObject);
     }
 

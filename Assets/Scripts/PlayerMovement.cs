@@ -58,9 +58,9 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded()
     {
         // use collider height to calculate raycast origin
-        Vector3 _origin = new Vector3(transform.position.x, transform.position.y + 0.05f, transform.position.z);
+        Vector3 _origin = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
         // raycast down a little to check if ground is hit
-        bool _hit = Physics.Raycast(_origin, Vector3.down, 0.5f);
+        bool _hit = Physics.Raycast(_origin, Vector3.down, 0.7f);
 
         return _hit;     
     }

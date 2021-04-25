@@ -40,6 +40,9 @@ public class MovableRock : MonoBehaviour
 
             Debug.Log("Rock stopped falling");
 
+            // sound fx
+            AudioManager.instance.Play("RockFall");
+
             // tutorial
             if (LevelManager.instance.activeSceneIndex == 2)
             {

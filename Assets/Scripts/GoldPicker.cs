@@ -17,12 +17,15 @@ public class GoldPicker : MonoBehaviour
             {
                 Debug.Log("Gold picked up");
 
-                // particles
-                Instantiate(particleEffect, other.transform.position, Quaternion.identity);
-
                 hasGold = true;
                 goldInHand.SetActive(true);
                 Destroy(other.gameObject);
+
+                // particles
+                Instantiate(particleEffect, other.transform.position, Quaternion.identity);
+
+                // sound fx
+                AudioManager.instance.Play("GoldPickUp");
 
                 // tutorial
                 if (LevelManager.instance.activeSceneIndex == 1)
